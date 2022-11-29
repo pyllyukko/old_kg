@@ -18,9 +18,9 @@ A := 0;
 B := 0;
 X := 0;
 for A := 1 To 1840 Do Begin
-  TextBackground(Byte(Image[(A*2)]) mod 8);
-  TextColor(Byte(Image[(A*2)]));
-  Write('A');
+  TextBackground(Byte(Image[(A*2)]) shr 8);
+  TextColor(Byte(Image[(A*2)]) mod 16);
+  Write(Image[A*2-1]);
   If A mod 80 = 0 then
     WriteLn();
 End;
