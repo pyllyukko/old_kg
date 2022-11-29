@@ -6,19 +6,24 @@ Uses CRT;
 type ScreenType = array [0..3680] of Byte;
 
 Var
-Screen : ScreenType absolute $B800:0000;
 Nimi : String;
 X,A,B : LongInt;
 Sum : LongInt;
 
 Begin
 ClrScr;
-Move (Image,Screen,3680);
 Sum := 0;
 Nimi := '';
 A := 0;
 B := 0;
 X := 0;
+for A := 1 To 1840 Do Begin
+  TextBackground(Byte(Image[(A*2)]) mod 8);
+  TextColor(Byte(Image[(A*2)]));
+  Write('A');
+  If A mod 80 = 0 then
+    WriteLn();
+End;
 TextColor(YELLOW);
 GotoXY(18, 19);
 Read(Nimi);
