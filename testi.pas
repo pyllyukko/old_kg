@@ -1,5 +1,7 @@
 Program Gnr;
-Uses CRT;
+Uses
+  CRT,
+  iconvenc;
 
 {$I G.pas}
 
@@ -9,6 +11,7 @@ Var
 Nimi : String;
 X,A,B : LongInt;
 Sum : LongInt;
+res: AnsiString;
 
 Begin
 ClrScr;
@@ -20,7 +23,8 @@ X := 0;
 for A := 1 To 1840 Do Begin
   TextBackground(Byte(Image[(A*2)]) shr 8);
   TextColor(Byte(Image[(A*2)]) mod 16);
-  Write(Image[A*2-1]);
+  Iconvert(Image[A*2-1], res, '437', 'UTF-8');
+  Write(res);
   If A mod 80 = 0 then
     WriteLn();
 End;
