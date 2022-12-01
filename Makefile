@@ -1,2 +1,2 @@
-testi: testi.pas
+keygen: keygen.pas
 	fpc $<
