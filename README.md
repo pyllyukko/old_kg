@@ -9,4 +9,4 @@ I felt like porting this to a modern OS and with small changes it now compiles i
 
 ![Keygen in Linux](new-1.png)
 
-Oh well... Close enough! 😂 ¯\\_(ツ)_/¯
+Oh well... Close enough! 😂 ¯\\\_(ツ)\_/¯
