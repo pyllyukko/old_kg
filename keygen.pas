@@ -5,8 +5,6 @@ Uses
 
 {$I G.pas}
 
-type ScreenType = array [0..3680] of Byte;
-
 Var
 Nimi : String;
 X,A,B : LongInt;
